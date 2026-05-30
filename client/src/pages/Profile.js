@@ -61,11 +61,6 @@ export default function Profile() {
       </div>
     );
 
-  const notify = (message) => {
-    setToast(message);
-    window.setTimeout(() => setToast(null), 3200);
-  };
-
   return (
     <div className="min-h-screen bg-slate-50 pb-10">
       {toast && (
