@@ -199,7 +199,7 @@ export default function Home() {
         notify(data?.message || data || "Could not follow user");
         return;
       }
-+      notify("Followed successfully!");
+     notify("Followed successfully!");
     } catch (err) {
       console.error(err);
       // revert optimistic update on error
@@ -240,7 +240,7 @@ export default function Home() {
         notify(data?.message || data || "Could not unfollow user");
         return;
       }
-+      notify("Unfollowed successfully!");
+   notify("Unfollowed successfully!");
     } catch (err) {
       console.error(err);
       setFollowingSet(prevFollowing);
