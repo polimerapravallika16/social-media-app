@@ -1,0 +1,35 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Gradient Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  background: linear-gradient(45deg, #ff0066, #ffcc00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Search */
+.search {
+  padding: 8px;
+  width: 300px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+/* Icons */
+.nav-icons a,
+.nav-icons span {
+  margin-left: 15px;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}

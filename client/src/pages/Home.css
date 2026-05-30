@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(135deg, #ff758c, #67e8f9);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.app {
+  width: 500px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.create {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.create input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.create button {
+  padding: 10px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  border-radius: 10px;
+}
+
+.post {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
