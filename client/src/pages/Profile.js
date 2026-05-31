@@ -13,7 +13,7 @@ export default function Profile() {
   const token = localStorage.getItem("token");
   const authHeader = token ? { Authorization: `Bearer ${token}` } : {};
   const [isFollowing, setIsFollowing] = useState(false);
-  const [toast, setToast] = useState(null);
+  const [toast] = useState(null);
 
   useEffect(() => {
     const fetchProfile = async () => {
