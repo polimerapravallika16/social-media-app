@@ -18,14 +18,14 @@ export default function Profile() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/users/${userId}`);
+        const res = await fetch(`http://https://social-media-app-production-ef17.up.railway.app/api/users/${userId}`);
         const userData = await res.json();
         setData(userData);
         setIsOwnProfile(userId === currentUserId);
 
         const [followersRes, followingRes] = await Promise.all([
-          fetch(`http://localhost:5000/api/users/followers/${userId}`),
-          fetch(`http://localhost:5000/api/users/following/${userId}`),
+          fetch(`http://https://social-media-app-production-ef17.up.railway.app/api/users/followers/${userId}`),
+          fetch(`http://https://social-media-app-production-ef17.up.railway.app/api/users/following/${userId}`),
         ]);
 
         const [followersList, followingList] = await Promise.all([
@@ -39,7 +39,7 @@ export default function Profile() {
         // determine whether current user is following this profile
         if (currentUserId && currentUserId !== userId) {
           try {
-            const myFollowingRes = await fetch(`http://localhost:5000/api/users/following/${currentUserId}`);
+            const myFollowingRes = await fetch(`http://https://social-media-app-production-ef17.up.railway.app/api/users/following/${currentUserId}`);
             const myFollowing = await myFollowingRes.json();
             setIsFollowing(myFollowing.some((f) => (f._id || f.id) === userId));
           } catch (e) {
@@ -104,7 +104,7 @@ export default function Profile() {
                   }
 
                   try {
-                    const res = await fetch(`http://localhost:5000/api/users/${prev ? 'unfollow' : 'follow'}/${userId}`, {
+                    const res = await fetch(`http://https://social-media-app-production-ef17.up.railway.app/api/users/${prev ? 'unfollow' : 'follow'}/${userId}`, {
                       method: "PATCH",
                       headers: { "Content-Type": "application/json", ...authHeader },
                     });

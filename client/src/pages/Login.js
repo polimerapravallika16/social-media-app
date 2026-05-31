@@ -8,7 +8,7 @@ function Login() {
   useEffect(() => {
     const loadUsers = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/users/all");
+        const res = await fetch("http://https://social-media-app-production-ef17.up.railway.app/api/users/all");
         if (!res.ok) return;
         const users = await res.json();
         setSampleUsers(users);
@@ -26,7 +26,7 @@ function Login() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/login", {
+      const res = await fetch("http://https://social-media-app-production-ef17.up.railway.app/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

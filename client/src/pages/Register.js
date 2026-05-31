@@ -12,7 +12,7 @@ function Register() {
     try {
 
       const res = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "http://https://social-media-app-production-ef17.up.railway.app/api/auth/register",
         {
           username,
           email,

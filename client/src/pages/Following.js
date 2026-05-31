@@ -10,7 +10,7 @@ export default function Following() {
 
     const fetchFollowing = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/users/following/${myId}`);
+        const res = await fetch(`http://https://social-media-app-production-ef17.up.railway.app/api/users/following/${myId}`);
         const data = await res.json();
         setUsers(data);
       } catch (err) {
@@ -23,7 +23,7 @@ export default function Following() {
 
   const handleUnfollow = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/users/unfollow/${id}`, {
+      const res = await fetch(`http://https://social-media-app-production-ef17.up.railway.app/api/users/unfollow/${id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
