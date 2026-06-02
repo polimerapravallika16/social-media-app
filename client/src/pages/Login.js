@@ -97,7 +97,9 @@ function Login() {
                   </div>
                 ))
               ) : (
-                <div className="rounded-2xl bg-slate-800/80 p-3">Loading accounts…</div>
+                <div className="rounded-2xl bg-slate-800/80 p-3">
+  Use your registered email and password to log in.
+</div>
               )}
             </div>
           </div>
