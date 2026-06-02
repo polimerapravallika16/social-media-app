@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar";
 
-const API_BASE = "https://://social-media-app-production-ef17.up.railway.app";
+const API_BASE = "https://social-media-app-production-ef17.up.railway.app";
 const POSTS_PER_PAGE = 5;
 
 export default function Home() {

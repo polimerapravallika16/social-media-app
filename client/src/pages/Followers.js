@@ -11,8 +11,8 @@ export default function Followers() {
     const fetchLists = async () => {
       try {
         const [followersRes, followingRes] = await Promise.all([
-          fetch(`https://://social-media-app-production-ef17.up.railway.app/api/users/followers/${myId}`),
-          fetch(`https://://social-media-app-production-ef17.up.railway.app/api/users/following/${myId}`),
+          fetch(`https://social-media-app-production-ef17.up.railway.app/api/users/followers/${myId}`),
+          fetch(`https://social-media-app-production-ef17.up.railway.app/api/users/following/${myId}`),
         ]);
 
         const [followers, following] = await Promise.all([followersRes.json(), followingRes.json()]);
@@ -28,7 +28,7 @@ export default function Followers() {
 
   const handleFollow = async (id) => {
     try {
-      const res = await fetch(`https://://social-media-app-production-ef17.up.railway.app/api/users/follow/${id}`, {
+      const res = await fetch(`https://social-media-app-production-ef17.up.railway.app/api/users/follow/${id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
